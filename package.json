@@ -1,0 +1,19 @@
+{
+  "name": "devtinder",
+  "version": "1.0.0",
+  "description": "Tinder for developers",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/app.js"
+  },
+  "keywords": [
+    "node.js",
+    "javascript"
+  ],
+  "author": "Atul Soundale",
+  "license": "ISC",
+  "dependencies": {
+    "devtinder": "file:",
+    "express": "^4.21.2"
+  }
+}
