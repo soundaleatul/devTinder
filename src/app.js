@@ -1,17 +1,24 @@
-const express = require("express")
+const express = require("express");
 
 const app = express();
 
-app.use("/test",(req,res)=>{
-  res.send("Hello from testers  !!!")
-})
-app.use("/dev",(req,res)=>{
-  res.send("Hello from developers  !!!")
-})
-app.use("/prog",(req,res)=>{
-  res.send("Hello from programmers  !!!")
-})
+app.get("/user", (req, res) => {
+  res.send({ firstName: "Atul", lastName: "Soundale" });
+});
 
-app.listen(7777,()=>{
-  console.log("Server is successfully listening on port no 7777")
+app.post("/user", (req, res) => {
+  res.send("Data saved to database");
+});
+app.put("/user", (req, res) => {
+  res.send("Data changed from database");
+});
+app.delete("/user", (req, res) => {
+  res.send("Data deleted");
+});
+app.use("/user",(req,res)=>{
+  res.send("All http methods are handled here!!!")
 })
+app.listen(7777, () => {
+  console.log("Server is successfully listening on port no 7777");
+});
+
